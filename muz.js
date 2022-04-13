@@ -1,0 +1,7 @@
+const muz = require('aoi.js')
+const config = require (`./config.js`)
+const bot = new muz.Bot(config.bot)
+require('./handler/callbacks')(bot)
+require('./handler/variables')(bot)
+require('./events/ready')(bot)
+require('./events/gjoin')(bot)
